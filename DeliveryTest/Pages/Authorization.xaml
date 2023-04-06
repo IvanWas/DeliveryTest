@@ -1,0 +1,25 @@
+﻿<Page x:Class="DeliveryTest.Pages.Authorization"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeliveryTest.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="360" Background="#FF28333F"
+      Title="Authorization">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="0" Grid.Row="1"/>
+        <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Войти" FontFamily="Rubik" FontSize="20" Grid.Row="3" Margin="35,23,35,0" Click="Back_Click"/>
+        <TextBox Style="{DynamicResource TextBoxAuthorization}" x:Name="Login" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" TextChanged="Login_TextChanged"/>
+        <TextBox Style="{DynamicResource TextBoxAuthorization}" x:Name="Password" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" TextChanged="Password_TextChanged"/>
+
+    </Grid>
+</Page>
