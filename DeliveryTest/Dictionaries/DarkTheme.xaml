@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="ButtonMainColor" Color="#7B61FF"/>
+    <SolidColorBrush x:Key="ButtonBorderColor" Color="#514A9F"/>
+    <SolidColorBrush x:Key="TextMainColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="TextBoxMainColor" Color="#2F3C50"/>
+    <SolidColorBrush x:Key="TextBoxBorderColor" Color="#4A5566"/>
+    <SolidColorBrush x:Key="TextTextBoxColor" Color="#AEA8B2"/>
+</ResourceDictionary>
