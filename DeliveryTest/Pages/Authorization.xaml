@@ -5,10 +5,10 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DeliveryTest.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="360" Background="#FF28333F"
+      d:DesignHeight="800" d:DesignWidth="360"
       Title="Authorization">
 
-    <Grid>
+    <Grid Style="{DynamicResource Grid}">
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="1*"/>
@@ -18,8 +18,10 @@
         </Grid.RowDefinitions>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="0" Grid.Row="1"/>
         <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Войти" FontFamily="Rubik" FontSize="20" Grid.Row="3" Margin="35,23,35,0" Click="Back_Click"/>
-        <TextBox Style="{DynamicResource TextBoxAuthorization}" x:Name="Login" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" Text="Логин" VerticalAlignment="Top" TextChanged="Login_TextChanged"/>
-        <TextBox Style="{DynamicResource TextBoxAuthorization}" x:Name="Password" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" Text="Пароль" VerticalAlignment="Top" TextChanged="Password_TextChanged"/>
-
+        <TextBox Tag="Логин" Style="{DynamicResource TextBoxAuthorization}" x:Name="Login" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="Login_TextChanged"/>
+        <TextBox Tag="Пароль" Style="{DynamicResource TextBoxAuthorization}" x:Name="Password" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="Password_TextChanged"/>
+        <Button Style="{DynamicResource ButtonEnter}" HorizontalAlignment="Left" Height="35" Margin="290,33,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
+        <!--<Label Content="Логин" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="20" Foreground="#AEA8B2" Margin="53,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>-->
+        <!--<Label Content="Пароль" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="20" Foreground="#AEA8B2" Margin="53,26,0,0" Grid.Row="2" VerticalAlignment="Top"/>-->
     </Grid>
 </Page>

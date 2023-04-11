@@ -9,17 +9,18 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <Style x:Key="Grid" TargetType="{x:Type Grid}">
+        <Setter Property="Background" Value="{DynamicResource GridColor}"/>
+    </Style>
     <SolidColorBrush x:Key="Button.Static.Background" Color="#7B61FF"/>
     <SolidColorBrush x:Key="Button.Static.Border" Color="#514A9F"/>
     <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
     <SolidColorBrush x:Key="TextBox.Static.Border" Color="#4A5566"/>
-    <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>
-    <SolidColorBrush x:Key="TextBox.Focus.Border" Color="#FF569DE5"/>
     <DropShadowEffect x:Key="smallShadow" BlurRadius="3" ShadowDepth="3" Opacity="0.3"/>
     <Style x:Key="TextBoxAuthorization" TargetType="{x:Type TextBox}">
-        <Setter Property="Background" Value="#2F3C50"/>
-        <Setter Property="BorderBrush" Value="{StaticResource TextBox.Static.Border}"/>
-        <Setter Property="Foreground" Value="#AEA8B2"/>
+        <Setter Property="Background" Value="{DynamicResource TextBoxMainColor}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource TextBoxBorderColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextTextBoxColor}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -32,18 +33,19 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TextBox}">
-                    <Border x:Name="border" CornerRadius="18" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
-                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
-                    </Border>
+                    <Grid>
+                        <Border CornerRadius="18" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True" Style="{DynamicResource BorderStyleWithStroke}" Padding="5, 0, 0, 0" x:Name="border">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                        <Label Margin="22,0,0,0" x:Name="WaterMarkLabel" Content="{TemplateBinding Tag}" VerticalAlignment="Center"
+                           Visibility="Collapsed" Foreground="#AEA8B2" FontFamily="Rubik" FontSize="20"/>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="false">
                             <Setter Property="Opacity" TargetName="border" Value="0.56"/>
                         </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.MouseOver.Border}"/>
-                        </Trigger>
-                        <Trigger Property="IsKeyboardFocused" Value="true">
-                            <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource TextBox.Focus.Border}"/>
+                        <Trigger Property="Text" Value="">
+                            <Setter TargetName="WaterMarkLabel" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -63,9 +65,9 @@
     <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
     <Style x:Key="ButtonEnter" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
-        <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
-        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="{DynamicResource ButtonMainColor}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderColor}"/>
+        <Setter Property="Foreground" Value="{DynamicResource TextMainColor}"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>

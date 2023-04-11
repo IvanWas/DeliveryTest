@@ -13,10 +13,10 @@ namespace DeliveryTest
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class MusicalInstrumentShopEntities : DbContext
     {
-        public Entities()
-            : base("name=Entities")
+        public MusicalInstrumentShopEntities()
+            : base("name=MusicalInstrumentShopEntities")
         {
         }
     
@@ -34,6 +34,5 @@ namespace DeliveryTest
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Products> Products { get; set; }
         public virtual DbSet<StorageRooms> StorageRooms { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

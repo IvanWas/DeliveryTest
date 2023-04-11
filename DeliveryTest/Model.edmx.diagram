@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="17ce80a6e6154fab8f63d02633ff41da" Name="Diagram1">
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Categories" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Checks" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.CourierInvoices" Width="1.5" PointX="7.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Couriers" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Customers" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Deliveries" Width="1.5" PointX="10.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Orders" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.Products" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MusicalInstrumentShopModel.StorageRooms" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Products__Catego__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Checks__OrderId__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__CourierIn__Order__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Deliverie__Couri__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Orders__Customer__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Deliverie__Order__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__Orders__ProductI__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="MusicalInstrumentShopModel.FK__StorageRo__Produ__20C1E124" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
