@@ -9,6 +9,7 @@
       Title="Orders">
 
     <Grid>
-        
+        <Button Content="Импорт" HorizontalAlignment="Left" Height="33" Margin="39,25,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_Import"/>
+        <Button Content="Экспорт" HorizontalAlignment="Left" Height="33" Margin="156,25,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_Export"/>
     </Grid>
 </Page>

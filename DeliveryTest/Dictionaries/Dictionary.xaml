@@ -12,6 +12,11 @@
     <Style x:Key="Grid" TargetType="{x:Type Grid}">
         <Setter Property="Background" Value="{DynamicResource GridColor}"/>
     </Style>
+    <Style x:Key="Label" TargetType="{x:Type Label}">
+        <Setter Property="Foreground" Value="{DynamicResource LabelColor}"/>
+        <Setter Property="FontFamily" Value="Rubik"/>
+        <Setter Property="FontSize" Value="30"/>
+    </Style>
     <SolidColorBrush x:Key="Button.Static.Background" Color="#7B61FF"/>
     <SolidColorBrush x:Key="Button.Static.Border" Color="#514A9F"/>
     <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>

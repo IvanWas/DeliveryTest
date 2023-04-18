@@ -18,10 +18,8 @@
         </Grid.RowDefinitions>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="0" Grid.Row="1"/>
         <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Войти" FontFamily="Rubik" FontSize="20" Grid.Row="3" Margin="35,23,35,0" Click="Back_Click"/>
-        <TextBox Tag="Логин" Style="{DynamicResource TextBoxAuthorization}" x:Name="Login" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="Login_TextChanged"/>
-        <TextBox Tag="Пароль" Style="{DynamicResource TextBoxAuthorization}" x:Name="Password" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="Password_TextChanged"/>
-        <Button Style="{DynamicResource ButtonEnter}" HorizontalAlignment="Left" Height="35" Margin="290,33,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
-        <!--<Label Content="Логин" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="20" Foreground="#AEA8B2" Margin="53,26,0,0" Grid.Row="1" VerticalAlignment="Top"/>-->
-        <!--<Label Content="Пароль" HorizontalAlignment="Left" FontFamily="Rubik" FontSize="20" Foreground="#AEA8B2" Margin="53,26,0,0" Grid.Row="2" VerticalAlignment="Top"/>-->
+        <TextBox Tag="Логин" Style="{DynamicResource TextBoxAuthorization}" x:Name="LoginTB" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Tag="Пароль" Style="{DynamicResource TextBoxAuthorization}" x:Name="PasswordTB" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button Style="{DynamicResource ButtonEnter}" HorizontalAlignment="Left" Height="35" Margin="290,30,0,0" VerticalAlignment="Top" Width="35" Click="Button_Click"/>
     </Grid>
 </Page>

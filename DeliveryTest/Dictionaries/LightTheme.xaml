@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <SolidColorBrush x:Key="GridColor" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="LabelColor" Color="#000000"/>
     <SolidColorBrush x:Key="ButtonMainColor" Color="#EB5A6D"/>
     <SolidColorBrush x:Key="ButtonBorderColor" Color="#E35164"/>
     <SolidColorBrush x:Key="TextMainColor" Color="#FFFFFF"/>

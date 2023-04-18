@@ -40,6 +40,7 @@
           <Property Name="Phone" Type="nvarchar" MaxLength="50" />
           <Property Name="Username" Type="nvarchar" MaxLength="50" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" />
+          <Property Name="Style" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Customers">
           <Key>
@@ -278,6 +279,7 @@
           <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Style" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Deliveries" Relationship="Self.FK__Deliverie__Couri__21B6055D" FromRole="Couriers" ToRole="Deliveries" />
         </EntityType>
         <EntityType Name="Customers">
@@ -443,7 +445,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="MusicalInstrumentShopEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="MusicalInstrumentShopEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Categories" EntityType="Self.Categories" />
           <EntitySet Name="Checks" EntityType="Self.Checks" />
           <EntitySet Name="CourierInvoices" EntityType="Self.CourierInvoices" />
@@ -491,7 +493,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище MusicalInstrumentShopModelContainer" CdmEntityContainer="MusicalInstrumentShopEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище MusicalInstrumentShopModelContainer" CdmEntityContainer="MusicalInstrumentShopEntities1">
           <EntitySetMapping Name="Categories">
             <EntityTypeMapping TypeName="MusicalInstrumentShopModel.Categories">
               <MappingFragment StoreEntitySet="Categories">
@@ -529,6 +531,7 @@
                 <ScalarProperty Name="Phone" ColumnName="Phone" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Style" ColumnName="Style" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -13,10 +13,10 @@ namespace DeliveryTest
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class MusicalInstrumentShopEntities : DbContext
+    public partial class MusicalInstrumentShopEntities1 : DbContext
     {
-        public MusicalInstrumentShopEntities()
-            : base("name=MusicalInstrumentShopEntities")
+        public MusicalInstrumentShopEntities1()
+            : base("name=MusicalInstrumentShopEntities1")
         {
         }
     

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DeliveryTest.Utilities;
+using System.Security.Cryptography;
 
 namespace DeliveryTest.Pages
 {
@@ -30,32 +31,42 @@ namespace DeliveryTest.Pages
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            if (String.IsNullOrEmpty(Login.Text) || String.IsNullOrEmpty(Password.Text))
+            if (String.IsNullOrEmpty(LoginTB.Text) || String.IsNullOrEmpty(PasswordTB.Text))
 
             {
                 MessageBox.Show("Есть незаполненные поля", "Ошибка авторизации", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
-            using (var db = new MusicalInstrumentShopEntities())
+            else
             {
-                var users = db.Couriers.FirstOrDefault(u => u.Username == Login.Text && u.Password == Password.Text);
+                var database = new MusicalInstrumentShopEntities1();
+                var pass = Registration.GetHash(PasswordTB.Text);
+                var сouriers = database.Couriers.FirstOrDefault(u => u.Username == LoginTB.Text && u.Password == pass);
 
-                if (users == null)
+
+                if (сouriers != null && (сouriers.Username != LoginTB.Text || сouriers.Password != pass))
                 {
-                    MessageBox.Show("Пользователь с такими данными не найден!");
-                    return;
+                    var result = MessageBox.Show("Пользователь под таким именем не найден!", "Ошибка авторизации", MessageBoxButton.YesNo, MessageBoxImage.Information);
                 }
+                
+                else if (сouriers == null)
+                {
+                    var result = MessageBox.Show("Пользователь не найден, хотите зарегистрироваться?", "Ошибка авторизации", MessageBoxButton.YesNo, MessageBoxImage.Information);
+                    if (result == MessageBoxResult.Yes)
+                    {
+                        NavigationService.Navigate(new Registration());
+                    }
+                    LoginTB.Text = "";
+                    PasswordTB.Text = "";
+
+                }
+                else if (сouriers.Username == LoginTB.Text && сouriers.Password == pass)
+                {
+                    MessageBox.Show($"Доброго времени суток, {сouriers.FullName}! У Вас вышло авторизоваться!");
+                    NavigationService.Navigate(new Orders());
+                }
+
             }
-            NavigationService.Navigate(new Orders());
-        }
-        private void Password_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void Login_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
