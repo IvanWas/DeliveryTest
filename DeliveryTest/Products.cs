@@ -23,7 +23,6 @@ namespace DeliveryTest
     
         public int Id { get; set; }
         public string Name { get; set; }
-        public Nullable<int> Count { get; set; }
         public Nullable<double> Price { get; set; }
         public Nullable<double> Height { get; set; }
         public Nullable<double> Width { get; set; }

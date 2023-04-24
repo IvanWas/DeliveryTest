@@ -67,5 +67,9 @@ namespace DeliveryTest.Pages
             Process.Start("notepad.exe", path);
         }
 
+        private void Button_Click_BD(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new pr19());
+        }
     }
 }

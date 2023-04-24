@@ -10,17 +10,17 @@
 
     <Grid Style="{DynamicResource Grid}">
         <Grid.RowDefinitions>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2.5*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2.5*"/>
         </Grid.RowDefinitions>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="0" Grid.Row="1"/>
+        <Button Style="{DynamicResource ButtonEnter}" x:Name="Products" Content="Товары" FontFamily="Rubik" FontSize="20" Grid.Row="1" Margin="35,11,35,11" Click="Products_Click"/>
         <Button Style="{DynamicResource ButtonEnter}" x:Name="Customers" Content="Покупатели" FontFamily="Rubik" FontSize="20" Grid.Row="2" Margin="35,11,35,11" Click="Customers_Click"/>
-        <Button Style="{DynamicResource ButtonEnter}" x:Name="Products" Content="Товары" FontFamily="Rubik" FontSize="20" Grid.Row="1" Margin="35,5,35,17" Click="Products_Click"/>
         <Button Style="{DynamicResource ButtonEnter}" x:Name="Categories" Content="Категории товаров" FontFamily="Rubik" FontSize="20" Grid.Row="3" Margin="35,11,35,11" Click="Categories_Click"/>
-        <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Назад" FontFamily="Rubik" FontSize="20" Grid.Row="4" Margin="35,6,35,17" Click="Back_Click"/>
+        <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Назад" FontFamily="Rubik" FontSize="20" Grid.Row="4" Margin="35,11,35,11" Click="Back_Click"/>
     </Grid>
 </Page>

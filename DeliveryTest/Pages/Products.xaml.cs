@@ -23,20 +23,36 @@ namespace DeliveryTest.Pages
         public Products()
         {
             InitializeComponent();
-            DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.Context.Products.ToList().Select(x => new
-            {
-                Name = x.Name,
-                Count = x.Count,
-                Price = x.Price,
-                Height = x.Height,
-                Width = x.Width,
-                Length = x.Length,
-                Weight = x.Weight,
-                CategoryId = x.CategoryId,
-            }).ToList();
+            DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Products.ToList();
+        }
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new pr19());
         }
 
-       
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new EditProducts());
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                MusicalInstrumentShopEntities1.GetContext().ChangeTracker.Entries().ToList().ForEach(r => r.Reload());
+                DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Products.ToList();
+            }
+        }
     }
 
         

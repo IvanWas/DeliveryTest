@@ -23,11 +23,12 @@ namespace DeliveryTest.Pages
         public Categories()
         {
             InitializeComponent();
-            DataGridCategories.ItemsSource = MusicalInstrumentShopEntities1.Context.Categories.ToList().Select(x => new
-            {
-                Name= x.Name
-            }).ToList();
+            DataGridCategories.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Categories.ToList();
         }
-     
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new pr19());
+        }
     }
 }

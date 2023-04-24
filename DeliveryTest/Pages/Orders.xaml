@@ -5,11 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DeliveryTest.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="360" Background="#FF28333F"
+      d:DesignHeight="800" d:DesignWidth="360"
       Title="Orders">
 
-    <Grid>
-        <Button Content="Импорт" HorizontalAlignment="Left" Height="33" Margin="39,25,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_Import"/>
-        <Button Content="Экспорт" HorizontalAlignment="Left" Height="33" Margin="156,25,0,0" VerticalAlignment="Top" Width="96" Click="Button_Click_Export"/>
+    <Grid Style="{DynamicResource Grid}">
+        <Button Style="{DynamicResource ButtonEnter}" Content="Импорт" HorizontalAlignment="Left" Height="50" Margin="10,25,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click_Import"/>
+        <Button Style="{DynamicResource ButtonEnter}" Content="Экспорт" HorizontalAlignment="Left" Height="50" Margin="10,95,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click_Export"/>
+        <Button Style="{DynamicResource ButtonEnter}" Content="База данных" HorizontalAlignment="Left" Height="50" Margin="10,165,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click_BD"/>
     </Grid>
 </Page>

@@ -42,7 +42,7 @@ namespace DeliveryTest.Pages
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            
+            NavigationService.Navigate(new Orders());
         }
     }
 }

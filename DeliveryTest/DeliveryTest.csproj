@@ -106,8 +106,8 @@
     <Compile Include="Pages\Customers.xaml.cs">
       <DependentUpon>Customers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\EditCustomers.xaml.cs">
-      <DependentUpon>EditCustomers.xaml</DependentUpon>
+    <Compile Include="Pages\EditProducts.xaml.cs">
+      <DependentUpon>EditProducts.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Orders.xaml.cs">
       <DependentUpon>Orders.xaml</DependentUpon>
@@ -122,6 +122,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="StorageRooms.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Utilities\Themes.cs" />
@@ -161,7 +164,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\EditCustomers.xaml">
+    <Page Include="Pages\EditProducts.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -228,8 +231,8 @@
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

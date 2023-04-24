@@ -62,7 +62,7 @@ namespace DeliveryTest.Pages
                 }
                 else if (сouriers.Username == LoginTB.Text && сouriers.Password == pass)
                 {
-                    MessageBox.Show($"Доброго времени суток, {сouriers.FullName}! У Вас вышло авторизоваться!");
+                    MessageBox.Show($"Добро пожаловать!");
                     NavigationService.Navigate(new Orders());
                 }
 

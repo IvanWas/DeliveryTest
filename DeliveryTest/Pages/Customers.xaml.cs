@@ -23,31 +23,13 @@ namespace DeliveryTest.Pages
         public Customers()
         {
             InitializeComponent();
-            DataGridCustomers.ItemsSource = MusicalInstrumentShopEntities1.Context.Customers.ToList().Select(x => new
-            {
-                FullName = x.FullName,
-                Address = x.Address,
-                Phone = x.Phone,
-                Email = x.Email
-               
-            }).ToList();
+            DataGridCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
         }
 
-        private void Add_Click(object sender, RoutedEventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditCustomers());
-        }
-
-        private void Delete_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-
+            NavigationService.Navigate(new pr19());
         }
     }
-    
 }
 
