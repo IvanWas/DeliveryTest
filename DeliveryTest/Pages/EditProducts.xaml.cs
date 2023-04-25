@@ -59,12 +59,12 @@ namespace DeliveryTest.Pages
             {
                 MusicalInstrumentShopEntities1.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
-                NavigationService.GoBack();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+            NavigationService.Navigate(new ProductsPage());
         }
 
     }

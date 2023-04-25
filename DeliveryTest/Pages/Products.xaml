@@ -23,7 +23,7 @@
                 <DataGridTextColumn Header="Width" Binding="{Binding Width}" Width="*"/>
                 <DataGridTextColumn Header="Length" Binding="{Binding Length}" Width="*"/>
                 <DataGridTextColumn Header="Weight" Binding="{Binding Weight}" Width="*"/>
-                <DataGridTextColumn Header="CategoryId" Binding="{Binding CategoryId}" Width="*"/>
+                <DataGridTextColumn Header="CategoryId" Binding="{Binding Categories.Name}" Width="*"/>
                 <DataGridTemplateColumn Width="auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
