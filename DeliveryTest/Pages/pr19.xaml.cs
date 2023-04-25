@@ -27,7 +27,7 @@ namespace DeliveryTest.Pages
 
         private void Products_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Products());
+            NavigationService.Navigate(new ProductsPage());
         }
 
         private void Customers_Click(object sender, RoutedEventArgs e)

@@ -22,7 +22,7 @@
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Column="0" Grid.Row="1"/>
         <Label Style="{DynamicResource Label}" Content="Регистрация" Grid.Row="0" Margin="75,73,74,0" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="60"/>
         <Button Style="{DynamicResource ButtonEnter}" x:Name="Back" Content="Зарегистрироваться" FontFamily="Rubik" FontSize="20" Grid.Row="6" Margin="35,23,35,0" Click="Back_Click"/>
-        <TextBox Tag="ФИО" Style="{DynamicResource TextBoxAuthorization}" x:Name="FIOTBReg" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox Tag="ФИО" Style="{DynamicResource TextBoxAuthorization}" x:Name="FIOTBReg" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="1" VerticalAlignment="Top"/>
         <TextBox Tag="Телефон" Style="{DynamicResource TextBoxAuthorization}" x:Name="PhoneTBReg" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Tag="Логин" Style="{DynamicResource TextBoxAuthorization}" x:Name="LoginTBReg" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Top"/>
         <TextBox Tag="Пароль" Style="{DynamicResource TextBoxAuthorization}" x:Name="PasswordTBReg" FontFamily="Rubik" FontSize="20" VerticalContentAlignment="Center" Margin="35,10,35,0" Grid.Row="4" TextWrapping="Wrap" VerticalAlignment="Top"/>
