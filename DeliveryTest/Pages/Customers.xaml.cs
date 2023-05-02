@@ -23,12 +23,29 @@ namespace DeliveryTest.Pages
         public Customers()
         {
             InitializeComponent();
-            DataGridCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
+            var currents = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
+            ListCustomers.ItemsSource = currents;
+            ListCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new pr19());
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            ListCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList().Where(x => $"{x.FullName}".ToLower().Contains(Tb.Text.ToLower())).ToList();
+        }
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        {
+            ListCustomers.ItemsSource = ListCustomers.ItemsSource.OfType<DeliveryTest.Customers>().OrderBy(x => x.FullName).ToList();
+        }
+
+        private void ComboBoxItem_Selected_1(object sender, RoutedEventArgs e)
+        {
+            ListCustomers.ItemsSource = ListCustomers.ItemsSource.OfType<DeliveryTest.Customers>().OrderByDescending(x => x.FullName).ToList();
         }
     }
 }
