@@ -23,9 +23,9 @@ namespace DeliveryTest.Pages
         public Customers()
         {
             InitializeComponent();
-            var currents = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
+            var currents = DBContext.GetContext().Customers.ToList();
             ListCustomers.ItemsSource = currents;
-            ListCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList();
+            ListCustomers.ItemsSource = DBContext.GetContext().Customers.ToList();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -36,7 +36,7 @@ namespace DeliveryTest.Pages
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
-            ListCustomers.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Customers.ToList().Where(x => $"{x.FullName}".ToLower().Contains(Tb.Text.ToLower())).ToList();
+            ListCustomers.ItemsSource = DBContext.GetContext().Customers.ToList().Where(x => $"{x.FullName}".ToLower().Contains(Tb.Text.ToLower())).ToList();
         }
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {

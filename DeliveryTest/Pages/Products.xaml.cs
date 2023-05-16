@@ -23,7 +23,7 @@ namespace DeliveryTest.Pages
         public ProductsPage()
         {
             InitializeComponent();
-            DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Products.ToList();
+            DataGridProducts.ItemsSource = DBContext.GetContext().Products.ToList();
         }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
@@ -48,11 +48,11 @@ namespace DeliveryTest.Pages
             {
                 try
                 {
-                    MusicalInstrumentShopEntities1.GetContext().Products.RemoveRange(productForRemoving);
-                    MusicalInstrumentShopEntities1.GetContext().SaveChanges();
+                    DBContext.GetContext().Products.RemoveRange(productForRemoving);
+                    DBContext.GetContext().SaveChanges();
                     MessageBox.Show("Данные успешно удалены!");
 
-                    DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Products.ToList();
+                    DataGridProducts.ItemsSource = DBContext.GetContext().Products.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -67,8 +67,8 @@ namespace DeliveryTest.Pages
         {
             if (Visibility == Visibility.Visible)
             {
-                MusicalInstrumentShopEntities1.GetContext().ChangeTracker.Entries().ToList().ForEach(r => r.Reload());
-                DataGridProducts.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Products.ToList();
+                DBContext.GetContext().ChangeTracker.Entries().ToList().ForEach(r => r.Reload());
+                DataGridProducts.ItemsSource = DBContext.GetContext().Products.ToList();
             }
         }
     }

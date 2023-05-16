@@ -19,7 +19,7 @@ namespace DeliveryTest.Pages
             if (selectedProducts != null)
                 _currentProducts = selectedProducts;
             DataContext = _currentProducts;
-            ComdoCategories.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Categories.ToList();
+            ComdoCategories.ItemsSource = DBContext.GetContext().Categories.ToList();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
@@ -52,12 +52,12 @@ namespace DeliveryTest.Pages
 
             if (_currentProducts.Id == 0)
             {
-                MusicalInstrumentShopEntities1.GetContext().Products.Add(_currentProducts);
+                DBContext.GetContext().Products.Add(_currentProducts);
             }
 
             try
             {
-                MusicalInstrumentShopEntities1.GetContext().SaveChanges();
+                DBContext.GetContext().SaveChanges();
                 MessageBox.Show("Информация сохранена!");
             }
             catch (Exception ex)

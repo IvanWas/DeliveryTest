@@ -23,7 +23,7 @@ namespace DeliveryTest.Pages
         public Categories()
         {
             InitializeComponent();
-            DataGridCategories.ItemsSource = MusicalInstrumentShopEntities1.GetContext().Categories.ToList();
+            DataGridCategories.ItemsSource = DBContext.GetContext().Categories.ToList();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

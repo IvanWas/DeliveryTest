@@ -15,17 +15,11 @@ namespace DeliveryTest
     
     public partial class MusicalInstrumentShopEntities1 : DbContext
     {
-        private static MusicalInstrumentShopEntities1 _context;
         public MusicalInstrumentShopEntities1()
             : base("name=MusicalInstrumentShopEntities1")
         {
         }
-        public static MusicalInstrumentShopEntities1 GetContext()
-        {
-            if (_context == null)
-                _context = new MusicalInstrumentShopEntities1();
-            return _context;
-        }
+    
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();

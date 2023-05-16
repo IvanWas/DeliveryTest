@@ -25,7 +25,7 @@ namespace DeliveryTest
         {
             InitializeComponent();
             Closing += ShowCloseMessage;
-            MainFrame.Content = new Pages.Authorization();
+            MainFrame.Content = new Pages.Registration();
         }
          private void ShowCloseMessage(object sender, CancelEventArgs e)
         {
